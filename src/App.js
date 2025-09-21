@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/global.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import { useEffect } from 'react';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+//import Testimonials from './components/Testimonials';
+import Footer from './components/Footer';
+
 
 function App() {
+  useEffect(() => {
+    const updateCursor = (e) => {
+      document.body.style.setProperty('--cursor-x', `${e.clientX}px`);
+      document.body.style.setProperty('--cursor-y', `${e.clientY}px`);
+    };
+    window.addEventListener('mousemove', updateCursor);
+    return () => window.removeEventListener('mousemove', updateCursor);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <main id="home">
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+        {/* <Testimonials /> */}
+        <Footer />
+      </main>
+    </>
   );
 }
 

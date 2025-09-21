@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    padding-top: 80px; /* space for sticky navbar */
+  }
+  
+  .hero-section {
+    min-height: 100vh;
+    background: linear-gradient(to right, #040219, #100e2c, #00000e);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  
+  .tagline {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  .highlight {
+    color: #00c3ff;
+  }
+  

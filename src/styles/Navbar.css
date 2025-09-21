@@ -1,0 +1,29 @@
+.navbar {
+    background: rgba(15, 12, 41, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 1rem 2rem;
+  }
+  
+  .navbar-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .nav-link {
+    color: white !important;
+    margin-left: 1rem;
+    font-weight: 500;
+  }
+  
+  .nav-link:hover {
+    color: #00c3ff !important;
+    text-decoration: underline;
+  }
+  
+  .navbar-brand {
+    color: white !important;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  

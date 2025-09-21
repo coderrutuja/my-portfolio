@@ -1,0 +1,85 @@
+.contact-section {
+    background-color: #0f0c29;
+    color: #00f2e6;
+    padding: 80px 20px;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .terminal-box {
+    background-color: #000000cc;
+    border: 2px solid #00f2e6;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 0 20px #00f2e677;
+    max-width: 700px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .terminal-header {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #00ffcc;
+  }
+  
+  .terminal-form label {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .terminal-form span {
+    display: block;
+    color: #00f2e6;
+    margin-bottom: 8px;
+  }
+  
+  .terminal-form input,
+  .terminal-form textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #00f2e6;
+    color: #fff;
+    font-size: 1rem;
+    padding: 6px 4px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .terminal-form input:focus,
+  .terminal-form textarea:focus {
+    border-color: #00ffd5;
+  }
+  
+  .terminal-form button {
+    background: none;
+    border: 1px solid #00f2e6;
+    color: #00f2e6;
+    font-family: inherit;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .terminal-form button:hover {
+    background: #00f2e6;
+    color: #000;
+    border-color: #00ffd5;
+  }
+  
+  .blinking-cursor {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #00ffd5;
+    animation: blink 1s steps(1) infinite;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+  

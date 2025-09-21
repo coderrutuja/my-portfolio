@@ -1,0 +1,40 @@
+/* Ensure no unwanted margin/padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #0f0c29; /* fallback bg to avoid white flicker */
+  }
+  
+  /* Add padding top to avoid overlap from sticky navbar */
+  main {
+    padding-top: 80px; 
+  }
+  
+  html {
+    cursor: none;
+  }
+  
+  body::after {
+    content: '';
+    position: fixed;
+    top: var(--cursor-y, 0);
+    left: var(--cursor-x, 0);
+    width: 12px;
+    height: 12px;
+    background-color: #00ffcc;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px #00ffcc, 0 0 20px #00ffcc;
+    z-index: 9999;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  

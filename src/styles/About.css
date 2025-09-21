@@ -1,0 +1,86 @@
+.about-section {
+    padding: 80px 20px;
+    background: linear-gradient(to right, #000000, #0f0c29);
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #fdfdfd;
+  }
+  
+  .terminal-text {
+    font-size: 1.5rem;
+    color: #00c3ff;
+    font-weight: bold;
+  }
+  
+  .about-description {
+    max-width: 600px;
+    margin: auto;
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  
+  .tech-stack-title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .tech-icon {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .icon-box {
+    font-size: 2.2rem;
+    color: #b287f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon-box:hover {
+    transform: scale(1.15);
+    color: #00c3ff;
+  }
+  
+  .icon-box span {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+
+  .tech-icon {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .icon-box {
+    font-size: 2rem;
+    color: #00c3ff; /* new accent */
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid #00c3ff;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px #00f2e655;
+  }
+  
+  .icon-box:hover {
+    transform: scale(1.1);
+    color: #00c3ff;
+    border-color: #00c3ff;
+    box-shadow: 0 0 20px #00c3ff;
+  }
+  
+  
+  .icon-box span {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  

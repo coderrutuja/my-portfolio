@@ -1,0 +1,37 @@
+.footer-section {
+    background-color: #0b0b15;
+    padding: 40px 20px;
+    color: #00f2e6;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    border-top: 2px solid #00f2e6;
+  }
+  
+  .footer-text {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #00ffd5;
+  }
+  
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .footer-icons a {
+    color: #00f2e6;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-icons a:hover {
+    color: #00ffd5;
+  }
+  
+  .footer-bottom {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
