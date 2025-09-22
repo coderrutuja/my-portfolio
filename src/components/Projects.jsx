@@ -8,48 +8,56 @@ const projectsData = [
     category: 'Web',
     description: 'Expense tracker with AI insights for budgeting and savings.',
     tech: 'MERN, AI',
+    link: 'https://github.com/coderrutuja/Smart-Budget-Buddy-MERN',
   },
   {
     title: 'Plant Care Scheduler',
     category: 'Web',
     description: 'Reminders and logs for indoor plant care with AI tips.',
     tech: 'MEVN (Vue.js, Node.js, MongoDB, Express), AI',
+    link: 'https://github.com/coderrutuja/plant-Care-App-MEVN',
   },
   {
     title: 'Vue Pomodoro App',
     category: 'Web',
     description: 'A simple productivity timer built with Vue.js.',
     tech: 'Vue.js',
+    link: 'https://github.com/coderrutuja/Pomodoro-Vue',
   },
   {
     title: 'Cryptography Algorithm Visualizer',
     category: 'Cybersecurity',
     description: 'Interactive visualization of cryptography algorithms.',
     tech: 'React.js',
+    link: 'https://github.com/coderrutuja/Cryptography-Algorithms-Visualizer',
   },
   {
     title: 'VulnScanner Web App',
     category: 'Cybersecurity',
     description: 'Web vulnerability scanning tool for security analysis.',
     tech: 'Python, Flask',
+    link: 'https://github.com/coderrutuja/VulnScanner',
   },
   {
     title: 'Secure File Vault',
     category: 'Cybersecurity',
     description: 'End-to-end encrypted file storage using AES and hashing algorithms.',
     tech: 'Python, Flask, JWT',
+    link: 'https://github.com/coderrutuja/Secure-File-Vault',
   },
   {
     title: 'JWT Attack Simulator',
     category: 'Cybersecurity',
     description: 'Educational tool to simulate and understand JWT attacks.',
     tech: 'Python, Flask',
+    link: 'https://github.com/coderrutuja/JWT-Attack-Simulator',
   },
   {
     title: 'Cybersecurity Awareness App',
     category: 'Cybersecurity',
     description: 'Educates users about phishing, malware, and safety tips.',
     tech: 'React.js, Bootstrap, Firebase',
+    link: 'https://github.com/coderrutuja/Cybersecurity-Awareness-App',
   },
   {
     title: 'AWS IAM Console Demo',
@@ -106,6 +114,16 @@ const Projects = () => {
                 <h5>{project.title}</h5>
                 <p>{project.description}</p>
                 <div className="tech-used">{project.tech}</div>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-link"
+                  >
+                    🔗 View on GitHub
+                  </a>
+  )}
               </div>
             </motion.div>
           ))}
