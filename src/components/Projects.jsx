@@ -4,16 +4,46 @@ import '../styles/Projects.css';
 
 const projectsData = [
   {
-    title: 'All-in-One Expense Tracker',
+    title: 'Smart Budget Buddy',
     category: 'Web',
-    description: 'Track expenses with budget goals and real-time charts.',
-    tech: 'Next.js, MongoDB, Tailwind, Chart.js',
+    description: 'Expense tracker with AI insights for budgeting and savings.',
+    tech: 'MERN, AI',
   },
   {
-    title: 'AWS IAM Console Demo',
-    category: 'AWS',
-    description: 'Practical IAM demo for teaching AWS identity management.',
-    tech: 'AWS Console, IAM, Security Groups',
+    title: 'Plant Care Scheduler',
+    category: 'Web',
+    description: 'Reminders and logs for indoor plant care with AI tips.',
+    tech: 'MEVN (Vue.js, Node.js, MongoDB, Express), AI',
+  },
+  {
+    title: 'Vue Pomodoro App',
+    category: 'Web',
+    description: 'A simple productivity timer built with Vue.js.',
+    tech: 'Vue.js',
+  },
+  {
+    title: 'Cryptography Algorithm Visualizer',
+    category: 'Cybersecurity',
+    description: 'Interactive visualization of cryptography algorithms.',
+    tech: 'React.js',
+  },
+  {
+    title: 'VulnScanner Web App',
+    category: 'Cybersecurity',
+    description: 'Web vulnerability scanning tool for security analysis.',
+    tech: 'Python, Flask',
+  },
+  {
+    title: 'Secure File Vault',
+    category: 'Cybersecurity',
+    description: 'End-to-end encrypted file storage using AES and hashing algorithms.',
+    tech: 'Python, Flask, JWT',
+  },
+  {
+    title: 'JWT Attack Simulator',
+    category: 'Cybersecurity',
+    description: 'Educational tool to simulate and understand JWT attacks.',
+    tech: 'Python, Flask',
   },
   {
     title: 'Cybersecurity Awareness App',
@@ -22,21 +52,28 @@ const projectsData = [
     tech: 'React.js, Bootstrap, Firebase',
   },
   {
-    title: 'Plant Care Scheduler',
+    title: 'AWS IAM Console Demo',
+    category: 'AWS',
+    description: 'Practical IAM demo for teaching AWS identity management.',
+    tech: 'AWS Console, IAM, Security Groups',
+  },
+  {
+    title: 'All-in-One Expense Tracker',
     category: 'Web',
-    description: 'Reminders and logs for indoor plant care with AI tips.',
-    tech: 'Next.js, MongoDB, AI image analysis',
+    description: 'Track expenses with budget goals and real-time charts.',
+    tech: 'Next.js, MongoDB, Tailwind, Chart.js',
   },
 ];
 
-const categories = ['All', 'Web', 'AWS', 'Cybersecurity'];
+const categories = ['All', 'Web', 'Cybersecurity', 'AWS'];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const filteredProjects = activeCategory === 'All'
-    ? projectsData
-    : projectsData.filter(p => p.category === activeCategory);
+  const filteredProjects =
+    activeCategory === 'All'
+      ? projectsData
+      : projectsData.filter((p) => p.category === activeCategory);
 
   return (
     <section id="projects" className="projects-section text-white">
