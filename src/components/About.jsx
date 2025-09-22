@@ -3,9 +3,11 @@ import { Typewriter } from 'react-simple-typewriter';
 
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaLinux } from 'react-icons/fa';
-import { FaPython, FaJava, FaCuttlefish } from 'react-icons/fa';
+import { FaPython, FaJava, FaCuttlefish, FaAmazon } from 'react-icons/fa';
 
-import { SiMongodb, SiBootstrap, SiNextdotjs } from 'react-icons/si';
+import { SiMongodb, SiBootstrap, SiNextdotjs, SiExpress, 
+  SiMysql, SiPostgresql, SiSpringboot, SiGraphql, 
+  SiFlask, SiDjango, SiGithub, SiVuedotjs  } from 'react-icons/si';
 import '../styles/About.css';
 
 const About = () => {
@@ -14,16 +16,24 @@ const About = () => {
   { icon: <FaCss3Alt />, name: 'CSS3' },
   { icon: <FaJs />, name: 'JavaScript' },
   { icon: <FaReact />, name: 'React' },
+  { icon: <SiVuedotjs />, name: 'Vue.js' },
   { icon: <SiNextdotjs />, name: 'Next.js' },
   { icon: <FaNodeJs />, name: 'Node.js' },
+  { icon: <SiExpress />, name: 'Express.js' },
   { icon: <SiMongodb />, name: 'MongoDB' },
   { icon: <SiBootstrap />, name: 'Bootstrap' },
   { icon: <FaGitAlt />, name: 'Git' },
+  { icon: <SiGithub />, name: 'GitHub' },
   { icon: <FaLinux />, name: 'Linux' },
-  { icon: <SiMongodb />, name: 'Mongoose' },
-  { icon: <SiNextdotjs />, name: 'AWS (IAM/EC2)' }, // AWS generic icon isn't in react-icons
+  { icon: <SiMysql />, name: 'MySQL' },
+  { icon: <SiPostgresql />, name: 'PostgreSQL' },
+  { icon: <SiSpringboot />, name: 'Spring Boot' },
+  { icon: <SiGraphql />, name: 'GraphQL' },
+  { icon: <SiFlask />, name: 'Flask' },
+  { icon: <SiDjango />, name: 'Django' },
+  { icon: <FaAmazon />, name: 'AWS (IAM/EC2)' }, // AWS generic icon isn't in react-icons
   { icon: <FaPython />, name: 'Python' },
-  //{ icon: <FaSQL />, name: 'SQL' },
+  
   { icon: <FaJava />, name: 'Java' },
   { icon: <FaCuttlefish />, name: 'C / C++' },
   ];

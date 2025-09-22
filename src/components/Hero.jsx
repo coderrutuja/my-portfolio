@@ -1,10 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Hero.css';
+import profileImage from '../assets/rva.png';
 
 const Hero = () => {
   return (
     <section className="hero-section d-flex flex-column justify-content-center align-items-center text-center">
+
+      <motion.img
+        src={profileImage}
+        alt="Rutuja Ainapure"
+        className="hero-image mb-4"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+      />
+
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
