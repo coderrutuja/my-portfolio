@@ -11,6 +11,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 //import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import HackerBackground from './components/HackerBackground';
 
 
 function App() {
@@ -22,19 +23,24 @@ function App() {
     window.addEventListener('mousemove', updateCursor);
     return () => window.removeEventListener('mousemove', updateCursor);
   }, []);
+
   return (
     <>
-      <Navbar />
-      <main id="home">
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
-        {/* <Testimonials /> */}
-        <Footer />
-      </main>
+      <HackerBackground />  
+      <div className="app-content">
+        <Navbar />
+        <main id="home">
+          <Hero />
+          <About />
+          <Projects />
+          <Contact />
+          {/* <Testimonials /> */}
+          <Footer />
+        </main>
+      </div>
     </>
   );
 }
+
 
 export default App;

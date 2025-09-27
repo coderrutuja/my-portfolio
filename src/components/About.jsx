@@ -38,6 +38,9 @@ const About = () => {
   { icon: <FaCuttlefish />, name: 'C / C++' },
   ];
 
+  // Duplicate the array so scrolling feels continuous
+  const scrollingIcons = [...techIcons, ...techIcons];
+
   return (
     <section id="about" className="about-section text-white">
       <div className="container text-center">
@@ -64,7 +67,73 @@ const About = () => {
         </p>
 
         <h3 className="tech-stack-title mt-5">Tech Stack</h3>
-        <div className="row justify-content-center mt-3">
+
+        <div className="scroll-container">
+          {/* Row 1 → Left */}
+          <motion.div
+            className="scroll-row scroll-content"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+            repeat: Infinity,
+            ease: "linear",
+            duration: 25,
+          }}
+          >
+    {scrollingIcons.map((tech, index) => (
+      <div key={index} className="tech-card">
+        <div className="icon-box">
+          {tech.icon}
+          <span>{tech.name}</span>
+        </div>
+      </div>
+    ))}
+  </motion.div>
+
+  {/* Row 2 → Right */}
+  <motion.div
+    className="scroll-row scroll-content"
+    animate={{ x: ["-50%", "0%"] }}
+    transition={{
+      repeat: Infinity,
+      ease: "linear",
+      duration: 25,
+    }}
+  >
+    {scrollingIcons.map((tech, index) => (
+      <div key={index} className="tech-card">
+        <div className="icon-box">
+          {tech.icon}
+          <span>{tech.name}</span>
+        </div>
+      </div>
+    ))}
+  </motion.div>
+</div>
+
+
+        {/* Infinite horizontal scroll */}
+        {/* <div className="scroll-container">
+          <motion.div
+            className="scroll-content"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              repeat: Infinity,
+              ease: "linear",
+              duration: 25, // adjust speed
+            }}
+          >
+            {scrollingIcons.map((tech, index) => (
+              <div key={index} className="tech-card">
+                <div className="icon-box">
+                  {tech.icon}
+                  <span>{tech.name}</span>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div> */}
+
+        {/* <div className="row justify-content-center mt-3">
           {techIcons.map((tech, index) => (
             <motion.div
               key={index}
@@ -80,7 +149,7 @@ const About = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -1,10 +1,21 @@
 /* Ensure no unwanted margin/padding */
 body, html {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    background-color: #0f0c29; /* fallback bg to avoid white flicker */
-  }
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  height: 100%;       /* ensure full height for background */
+  /*background: transparent; /* let HackerBackground show through */
+  background: black;
+  overflow-x: hidden;  /* optional, prevent horizontal scroll */
+}
+
+#root, main {
+  height: 100%;  /* make sure canvas can extend fully */
+  position: relative; /* for stacking context */
+  z-index: 1; /* content stays above background */
+}
+
+  
   
   /* Add padding top to avoid overlap from sticky navbar */
   main {
@@ -37,4 +48,16 @@ body, html {
     overflow: hidden;
   }
   
+ /* .hacker-bg {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* behind everything *//*
+  pointer-events: none;
+   /* optional fallback *//*
+} */
+
+
   

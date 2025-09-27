@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Projects.css';
+import HackerBackground from './HackerBackground';
 
 const projectsData = [
   {
@@ -85,6 +86,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-section text-white">
+      <HackerBackground />
       <div className="container text-center">
         <h2 className="section-title">Projects</h2>
 

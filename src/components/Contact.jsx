@@ -2,11 +2,15 @@ import React from 'react';
 import '../styles/Contact.css';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
+import HackerBackground from './HackerBackground';
 
 
 const Contact = () => {
   return (
     <section id="contact" className="contact-section">
+
+      <HackerBackground />
+
       <div className="terminal-box container">
       <div className="terminal-header">
   <Typewriter
