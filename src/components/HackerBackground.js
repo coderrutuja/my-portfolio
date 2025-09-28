@@ -30,7 +30,7 @@ const HackerBackground = () => {
     mountRef.current.appendChild(renderer.domElement);
 
     // Particles geometry
-    const particlesCount = 20;
+    const particlesCount = 50;
     const positions = new Float32Array(particlesCount * 3);
 
     for (let i = 0; i < particlesCount; i++) {

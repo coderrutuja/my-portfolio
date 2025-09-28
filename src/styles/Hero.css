@@ -40,51 +40,9 @@ main {
   overflow: hidden; /* keep Three.js canvas inside *//*
 } */
 
-/* Three.js background container */
-.hacker-bg {
-  position: absolute;
-  inset: 0;           /* top:0; right:0; bottom:0; left:0; */
-  z-index: 0;
-  pointer-events: none; /* allow clicks through to hero content */
-  width: 100%;
-  height: 100%;
-}
 
-/* glowing animation wrapper */
-.glow-wrapper {
-  position: relative;
-  display: inline-block;
-  z-index: 2; /* above the hacker background */
-}
 
-.glow-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(0,195,255,0.6) 0%, transparent 70%);
-  animation: glowPulse 3s infinite ease-in-out;
-  z-index: -1;
-}
 
-@keyframes glowPulse {
-  0% {
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0.6;
-  }
-}
 
 .hero-image {
   width: 250px;
@@ -127,12 +85,7 @@ main {
   .hero-image { width: 140px; height: 140px; }
 }
 
-.glow-wrapper {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 /* Profile image in front of the rings */
 .hero-image {
@@ -143,84 +96,7 @@ main {
   box-shadow: 0 6px 18px rgba(0,0,0,0.45);
 }
 
-/* SVG wrapper */
-.ring-svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  pointer-events: none;
-}
 
-/* Base style for all rings */
-.ring-ring {
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke: rgba(0, 200, 255, 0.4);
-  animation: pulse 1.8s ease-in-out infinite alternate;
-}
-
-/* Each ring can have slightly different pulse speed / opacity */
-.ring-0 {
-  animation-duration: 1.8s;
-}
-.ring-1 {
-  stroke: rgba(0, 200, 255, 0.25);
-  animation-duration: 2.2s;
-}
-.ring-2 {
-  stroke: rgba(0, 200, 255, 0.15);
-  animation-duration: 2.6s;
-}
-
-/* Pulsing animation (grows and shrinks slightly) */
-@keyframes pulse {
-  0% {
-    stroke-width: 1.5;
-    opacity: 0.3;
-    transform: scale(0.95);
-  }
-  50% {
-    stroke-width: 2.5;
-    opacity: 0.6;
-    transform: scale(1.05);
-  }
-  100% {
-    stroke-width: 1.5;
-    opacity: 0.3;
-    transform: scale(0.95);
-  }
-}
-
-/* Outer glow */
-.glow-wrapper::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: calc(100% + 80px);
-  height: calc(100% + 80px);
-  border-radius: 50%;
-  filter: blur(14px);
-  background: radial-gradient(circle, rgba(0,200,255,0.08), transparent 50%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .hero-image {
-    width: 120px !important;
-    height: 120px !important;
-  }
-  .ring-svg {
-    width: 160px !important;
-    height: 160px !important;
-  }
-}
 
 
 

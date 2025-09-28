@@ -11,7 +11,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 //import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
-import HackerBackground from './components/HackerBackground';
+
 
 
 function App() {
@@ -26,7 +26,6 @@ function App() {
 
   return (
     <>
-      <HackerBackground />  
       <div className="app-content">
         <Navbar />
         <main id="home">
